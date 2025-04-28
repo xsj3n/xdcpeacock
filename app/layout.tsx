@@ -35,9 +35,9 @@ export default function RootLayout({
       <footer>
         <p>Icon here</p>
         <p>XDCP is a memecoin with no intrinsic value or expectation of financial return. There is no formal team or roadmap. The coin is for entertainment purposes only.</p>
-        <p>Sitemap: insert sitemap portions below</p>
+        <p style={{fontWeight: 700}}>Sitemap</p>
         <p>Insert row of social icons here</p>
-        <p>FAQ? Copyright?</p>
+        <p style={{fontWeight: 700}}>FAQ</p>
       </footer>
       </body>
     </html>
