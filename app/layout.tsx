@@ -36,11 +36,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={`bg-grey-800  ${anon_pro.className}`}>
       <nav className="">
-      <div id="nav" className="flex justify-between border-b border-solid border-black z-10 h-[8vh] sticky">
+      <div id="nav" className="flex justify-between border-b-2 border-solid border-black z-10 h-[8vh] sticky">
         <h2 className={`text-3xl p-2 ${honk.className} mt-2`}>XDCP</h2>
         <div className="flex justify-end-safe gap-4 p-2">
           <h2 className={`text-4xl ${honk.className} mt-2`}>EN</h2>
-          <FlipSwitch className="p-2 mb-2"></FlipSwitch>
+          <div className="bottom-[12vh]">
+            <FlipSwitch></FlipSwitch>
+          </div>
           <h2 className={`text-4xl ${honk.className} mt-2`}>Buy</h2>
         </div>
       </div>
