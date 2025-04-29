@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Anonymous_Pro, Inter } from "next/font/google";
-import { Honk } from "next/font/google"; 
+import { Honk } from "next/font/google";
 import Link from "next/link";
 import Image from "next/image";
+import { FlipSwitch } from "./flip_switch"
 import "./global.css"
 
 const anon_pro = Anonymous_Pro({
@@ -22,11 +23,15 @@ export const metadata: Metadata = {
   description: "XDCPeacock home site",
 };
 
+
+
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body className={`bg-grey-800  ${anon_pro.className}`}>
@@ -35,7 +40,7 @@ export default function RootLayout({
         <h2 className={`text-3xl p-2 ${honk.className} mt-2`}>XDCP</h2>
         <div className="flex justify-end-safe gap-4 p-2">
           <h2 className={`text-4xl ${honk.className} mt-2`}>EN</h2>
-          <Image src="/light_toggle_trimmed2.png" width={90} height={90} alt="Dark/Light switch"></Image>
+          <FlipSwitch className="p-2 mb-2"></FlipSwitch>
           <h2 className={`text-4xl ${honk.className} mt-2`}>Buy</h2>
         </div>
       </div>
