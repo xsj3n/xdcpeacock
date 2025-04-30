@@ -32,28 +32,28 @@ export default function Home() {
           
           <div className="col-span-2">
           <div className="grid grid-rows-2 gap-1 justify-items-center">
-            <Image src="/x_light.svg" width={36} height={36} alt="X social icon"></Image>
+            <Image src="/x.svg" width={36} height={36} alt="X social icon"></Image>
             <p className="text-center">Twitter</p>
           </div>
           </div>
         
           <div className="col-span-2">
           <div className="grid grid-rows-2 gap-1 justify-items-center">
-            <Image src="/telegram_light.svg" width={36} height={36} alt="X social icon"></Image>
+            <Image src="/telegram.svg" width={36} height={36} alt="X social icon"></Image>
             <p className="text-center">Telegram</p>
           </div>
           </div>
         
           <div className="col-span-2">
           <div className="grid grid-rows-2 gap-1 justify-items-center">
-            <Image src="/instagram_light.svg" width={36} height={36} alt="X social icon"></Image>
+            <Image src="/instagram.svg" width={36} height={36} alt="X social icon"></Image>
             <p className="text-center">Instagram</p>
           </div>
           </div>
         
           <div className="col-span-2">
           <div className="grid grid-rows-2 gap-1 justify-items-center ">
-            <Image src="/reddit_light.svg" width={36} height={36} alt="X social icon"></Image>
+            <Image src="/reddit.svg" width={36} height={36} alt="X social icon"></Image>
             <p className="text-center">Reddit</p>
           </div>
           </div>
