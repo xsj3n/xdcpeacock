@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Honk } from "next/font/google"; 
-
+import { XPayIframe } from "./xpay_embed";
 
 
 const honk = Honk({
