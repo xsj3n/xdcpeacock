@@ -13,9 +13,15 @@ export default function Home() {
   return (
     <main>
     <HeroSection imageOn={true} buyOn={false}></HeroSection>
-    <section className="w-full min-h-screen">
-      <div className="justify-center p-5">
-        <p className="text-center">Icon here</p>
+    <section className="w-full min-h-screen border-solid border-t-2 border-black">
+  
+      <div className="flex flex-col justify-center gap-1 p-4 mb-10 items-center">
+        <h2 className={`p-2 text-center text-4xl ${honk.className}`}>About XDCPeacock</h2>
+        <p className="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et volutpat justo, ut lacinia ligula. Donec ultrices commodo malesuada. Curabitur placerat lorem urna, nec commodo neque aliquet in. Integer in ipsum ut lorem porta vestibulum. Ut id ligula gravida dui lobortis placerat vitae nec tortor. Fusce elementum non massa ut mattis. Sed laoreet orci ante, sit amet ornare sem cursus quis. </p>
+      </div>
+
+      
+      <div className="flex flex-col justify-center items-center gap-1 p-10">
         <p className={`text-center text-4xl ${honk.className}`}>A memecoin for all, or some shit</p>
       </div>
       <div className="justify-center flex w-full">
@@ -56,10 +62,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="justify-center gap-1 p-4">
-        <h2 className={`p-4 text-center text-4xl ${honk.className}`}>About XDCPeacock</h2>
-        <p className="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et volutpat justo, ut lacinia ligula. Donec ultrices commodo malesuada. Curabitur placerat lorem urna, nec commodo neque aliquet in. Integer in ipsum ut lorem porta vestibulum. Ut id ligula gravida dui lobortis placerat vitae nec tortor. Fusce elementum non massa ut mattis. Sed laoreet orci ante, sit amet ornare sem cursus quis. </p>
       </div>
     </section>
     </main>

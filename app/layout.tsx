@@ -32,11 +32,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
+  let themeBgClassName = "bg-light dark:bg-dark"
+  let themeTextClassName = "text-dark dark:text-light"
   return (
     <html lang="en">
-      <head>
-      </head> 
-      <body className={`bg-grey-800  ${anon_pro.className}`}>
+      <body className={`${themeBgClassName} ${themeTextClassName} ${anon_pro.className}`}>
         
       <nav className="">
       <div id="nav" className="flex justify-between border-b-2 border-solid border-black z-10 h-18">
@@ -62,16 +62,22 @@ export default function RootLayout({
     
         {children}
 
-      <div className="border-solid border-t-1 border-black">
-        <footer className="p-2">
-          <p>Icon here</p>
-          <p>XDCP is a memecoin with no intrinsic value or expectation of financial return. There is no formal team or roadmap. The coin is for entertainment purposes only.</p>
-          <p style={{fontWeight: 700}}>Sitemap</p>
-          <p>Insert row of social icons here</p>
-          <p style={{fontWeight: 700}}>FAQ</p>
-        </footer>
-      </div>
-    
+        <footer className="p-3 h-15 border-solid border-t-2 border-black ">
+          <p className={`${honk.className} text-xl`}>XDCP</p>
+          <hr className={`text-black h-0.5 w-10 pt-1 pb-1`}  />
+          <div className="text-sm">
+            <p>XDCP is a memecoin with no intrinsic value or expectation of financial return. There is no formal team or roadmap. The coin is for entertainment purposes only.</p>
+            <hr className={`text-black h-0.5 w-7.5`}  />
+            <p style={{fontWeight: 700}}>Sitemap</p>
+            <div className="flex flex-row gap-3">
+              <Link href="/">Home</Link>
+              <Link href="/buy">Purchase</Link>
+            </div>
+            <hr className={`text-black h-0.5 w-5`}  />
+            <Link href="/under_construction" style={{fontWeight: 700}}>FAQ</Link>
+          </div>
+      </footer>
+
       </body>
     </html>
   );
