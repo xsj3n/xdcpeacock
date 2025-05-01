@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Honk } from "next/font/google"; 
-import { XPayIframe } from "./xpay_embed";
-
+import HeroSection from "./components/hero"; 
 
 const honk = Honk({
   weight: ["400"],
@@ -13,15 +12,7 @@ const honk = Honk({
 export default function Home() {
   return (
     <main>
-    <section className="w-full min-h-screen sticky bg-[url('../public/bg-colors.jpg')] bg-fixed bg-cover border-b-2 border-solid border-black">
-      <div className="backdrop-blur-sm min-h-screen justify-items-center inset-0">
-        <div className="flex relative justify-center min-h-screen top-[20vh]">
-        <div className="w-[400px] h-[400px]">
-          <Image src="/xdcpeacock_logo_nobg.png" width={400} height={400} alt="mascot image"></Image>
-        </div>
-       </div>
-       </div>
-    </section>
+    <HeroSection imageOn={true} buyOn={false}></HeroSection>
     <section className="w-full min-h-screen">
       <div className="justify-center p-5">
         <p className="text-center">Icon here</p>
