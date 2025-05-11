@@ -40,7 +40,7 @@ export default function Home() {
         <p className="text-center">{aboutText}</p>
       </div>
 
-      <div className="flex flex-col justify-center gap-1 p-4 mb-10 items-center">
+      <div className="flex flex-col justify-center gap-4 p-4 mb-10 items-center">
         <h2 className={`p-2 text-center text-4xl ${honk.className}`}>Tokenomics</h2>
         <div className="w-1/2">
           <TokenChart></TokenChart>
@@ -52,7 +52,7 @@ export default function Home() {
 
       
       <div className="flex flex-col justify-center items-center gap-1 p-10">
-        <p className={`text-center text-4xl ${honk.className}`}>A memecoin for all, or some shit</p>
+        <p className={`text-center text-4xl ${honk.className}`}>Socials</p>
       </div>
       <div className="justify-center flex w-full">
         <div className="grid grid-cols-4 w-75 gap-4">
