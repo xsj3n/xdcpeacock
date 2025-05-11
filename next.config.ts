@@ -11,7 +11,7 @@ const nextProdConfig: NextConfig = {
   reactStrictMode: true,
 };
 
-export default function nextConfig(phase) {
+export default function nextConfig(phase: string) {
   if (phase === PHASE_DEVELOPMENT_SERVER) {
     return nextDevConfig;
   }
