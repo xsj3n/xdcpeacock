@@ -1,9 +1,19 @@
 import type { NextConfig } from "next";
+import { PHASE_DEVELOPMENT_SERVER } from "next/constants"
 
-const nextConfig: NextConfig = {
-  basePath: "/xdcpeacock",
-  output: "export",
-  reactStrictMode: true
+const nextDevConfig: NextConfig = {
+  reactStrictMode: true,
 };
 
-export default nextConfig;
+const nextProdConfig: NextConfig = {
+  basePath: "/xdcpeacock",
+  output: "export",
+  reactStrictMode: true,
+};
+
+export default function nextConfig(phase) {
+  if (phase === PHASE_DEVELOPMENT_SERVER) {
+    return nextDevConfig;
+  }
+  return nextProdConfig;
+}

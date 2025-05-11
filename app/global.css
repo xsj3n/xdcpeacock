@@ -12,7 +12,12 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-light: #e2e1df;
-  --color-dark: #282c34; 
+  --color-dark: #282c34;
+  --color-goku-orange: rgba(227, 60, 18, 1);
+  --color-homeworld-blue: rgba(20, 150, 220, 1);
+  --color-sunshoe-plum: rgba(141, 98, 154, 1);
+  --color-clouded-pine: rgba(14, 158, 94, 1);
+  --color-flirty-salmon: rgba(255, 78, 150, 1);
 }
 
 @media (prefers-color-scheme: dark) {

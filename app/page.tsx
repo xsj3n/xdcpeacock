@@ -1,12 +1,32 @@
 import Image from "next/image";
 import { Honk } from "next/font/google"; 
-import HeroSection from "./components/hero"; 
+import HeroSection from "./components/hero";
+import TokenChart from "./components/token_chart";
+import Link from "next/link";
 
 const honk = Honk({
   weight: ["400"],
   subsets: ["latin"],
   display: "swap"
 })
+
+const aboutText = `
+XDCP is a token in the XDC ecosystem. XDCP was built on the XDC network because it is
+the leader in crypto speed and efficiency, has low fees, it is eco-friendly and has military
+grade security. XDC has already been chosen as the ISO 20022 banking coin, and we want
+to fly along for the ride. XDCP is a community driven memecoin that is dedicated to
+meme’s and building the peacock gang community from the ground up, so let’s make this
+peacock soar!
+`
+
+class TokenomicsText {
+  header: string;
+  text: string;
+  constructor(header: string, text: string) {
+    this.header = header;
+    this.text = text;
+  }
+}
 
 
 export default function Home() {
@@ -17,7 +37,17 @@ export default function Home() {
   
       <div className="flex flex-col justify-center gap-1 p-4 mb-10 items-center">
         <h2 className={`p-2 text-center text-4xl ${honk.className}`}>About XDCPeacock</h2>
-        <p className="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et volutpat justo, ut lacinia ligula. Donec ultrices commodo malesuada. Curabitur placerat lorem urna, nec commodo neque aliquet in. Integer in ipsum ut lorem porta vestibulum. Ut id ligula gravida dui lobortis placerat vitae nec tortor. Fusce elementum non massa ut mattis. Sed laoreet orci ante, sit amet ornare sem cursus quis. </p>
+        <p className="text-center">{aboutText}</p>
+      </div>
+
+      <div className="flex flex-col justify-center gap-1 p-4 mb-10 items-center">
+        <h2 className={`p-2 text-center text-4xl ${honk.className}`}>Tokenomics</h2>
+        <div className="w-1/2">
+          <TokenChart></TokenChart>
+        </div>
+        <h2 className={` text-center text2xl ${honk.className}`}></h2>
+        <p className="text-center"></p>
+          
       </div>
 
       
@@ -29,14 +59,18 @@ export default function Home() {
           
           <div className="col-span-2">
           <div className="grid grid-rows-2 gap-1 justify-items-center">
-            <Image src="/x.svg" width={36} height={36} alt="X social icon"></Image>
+            <Link href="https://x.com/XDCPeacock">
+              <Image src="/x.svg" width={36} height={36} alt="X social icon"></Image>
+            </Link>
             <p className="text-center">Twitter</p>
           </div>
           </div>
         
           <div className="col-span-2">
           <div className="grid grid-rows-2 gap-1 justify-items-center">
-            <Image src="/telegram.svg" width={36} height={36} alt="X social icon"></Image>
+            <Link href="https://www.instagram.com/xdcpeacock/">
+              <Image src="/telegram.svg" width={36} height={36} alt="X social icon"></Image>
+            </Link>
             <p className="text-center">Telegram</p>
           </div>
           </div>
