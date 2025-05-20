@@ -54,8 +54,8 @@ const options: ChartOptions<"doughnut"> = {
 
 function LegendText(header: string, text: string, color: string ) {
   return (
-    <div className="flex flex-row">
-      <div className="relative">
+    <div className="flex flex-row w-full sm:ml-0 ml-4">
+      <div className="relative ">
         <div className="absolute right-2 border-solid border-l-[27px] border-r-[27px] border-l-transparent border-r-transparent border-t-[54px] border-t-black"></div>
         <div className={`${color} absolute right-2 w-[0px] h-[0px] border-solid border-l-[25px] border-r-[25px] border-r-transparent border-l-transparent border-t-[50px]`}></div>
       </div>

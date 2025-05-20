@@ -39,7 +39,7 @@ export default function Home() {
   
       <div className="flex flex-col justify-center gap-1 p-4 mb-10 items-center">
         <h2 className={`p-2 text-center text-4xl ${honk.className}`}>About XDCPeacock</h2>
-        <p className="text-center">{aboutText}</p>
+        <p className="text-center sm:w-1/2">{aboutText}</p>
       </div>
 
       <div className="flex flex-col justify-center text-center">
@@ -50,13 +50,16 @@ export default function Home() {
 
       <div className="flex flex-col justify-center gap-4 p-4 mb-10 items-center">
         <h2 className={`p-2 text-center text-4xl ${honk.className}`}>Tokenomics</h2>
-        <div className="w-1/2">
+        <div className="sm:w-3/8 w-3/4">
           <TokenChart></TokenChart>
         </div>
       </div>
 
 
-      <div className="flex justify-center">
+      <div className="flex flex-col justify-center items-center gap-5">
+        <div>
+          <Image src="/xdcpeacock_logo_alt.png" width={160} height={160} alt="Logo next to buy button"></Image>
+        </div>
         <button className={`${honk.className} wave border-3 border-solid border-black p-2 rounded-lg bg-flirty-salmon sm:text-6xl text-4xl`}>
           <div className="wave">
             {waveText.map( (char, index) => (
