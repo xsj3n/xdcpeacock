@@ -40,20 +40,21 @@ export default function RootLayout({
       <body className={`${themeBgClassName} ${themeTextClassName} ${anon_pro.className}`}>
         
       <nav className="fixed top-0 left-0 right-0 z-50 shadow bg-light dark:bg-dark">
-      <div id="nav" className="flex justify-between border-b-2 border-solid border-black z-10 h-18">
+      <div id="nav" className="flex justify-between  border-b-2 border-solid border-black z-10 h-18 text-3xl sm:text-4xl">
         
-        <div className={`text-4xl ${honk.className} p-2`}>
+        
+        <div className={` ${honk.className} p-2`}>
           <Link href="/">XDCP</Link>
         </div>
         
-        <div className="flex justify-end-safe gap-4 pr-2">
-          <h2 className={`text-4xl ${honk.className} mt-2`}>EN</h2>
+        <div className="flex justify-end-safe sm:gap-4 pr-2">
+          <h2 className={` ${honk.className} mt-2`}>EN</h2>
           
           <div className="">
             <FlipSwitch></FlipSwitch>
           </div>
         
-          <h2 className={`text-4xl ${honk.className} mt-2`}>
+          <h2 className={`${honk.className} mt-2`}>
             <Link href="/buy">Connect</Link>
           </h2>
         </div>

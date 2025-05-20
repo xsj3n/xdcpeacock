@@ -27,19 +27,43 @@
   }
 }
 
-.wave {
-  position: relative;
-  transistion: 0.2s;
-  height: 1.5em;
-  display: flex;
+@media (min-width: 640px) {
+  .wave {
+    position: relative;
+    transistion: 0.2s;
+    height: 1.5em;
+    display: flex;
+  }
 }
 
-.wave:hover span {
-  position: relative;
-  display: inline-block;
-  animation: wave 2s ease-in-out infinite;
-  animation-delay: calc(0.1s * var(--i));
+@media (max-width: 639px) {
+  .wave {
+    position: relative;
+    transistion: 0.2s;
+    height: 1.8em;
+    display: flex;
+  }
 }
+
+@media (min-width: 640px) {
+  .wave:hover span {
+    position: relative;
+    display: inline-block;
+    animation: wave 2s ease-in-out infinite;
+    animation-delay: calc(0.1s * var(--i));
+  }
+  
+}
+
+@media (max-width: 639px) {
+  .wave span {
+    position: relative;
+    display: inline-block;
+    animation: wave 2s ease-in-out infinite;
+    animation-delay: calc(0.1s * var(--i));
+  }
+}
+  
 
 @keyframes wave {
   0% {
