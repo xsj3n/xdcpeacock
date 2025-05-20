@@ -42,10 +42,8 @@ export default function RootLayout({
       <nav className="fixed top-0 left-0 right-0 z-50 shadow bg-light dark:bg-dark">
       <div id="nav" className="flex justify-between border-b-2 border-solid border-black z-10 h-18">
         
-        <div className="p-1 ml-4">
-          <Link href="/">
-            <Image src="/xdcpeacock_logo_alt.png" width={56} height={56} alt="Logo"></Image>
-          </Link>
+        <div className={`text-4xl ${honk.className} p-2`}>
+          <Link href="/">XDCP</Link>
         </div>
         
         <div className="flex justify-end-safe gap-4 pr-2">
@@ -56,7 +54,7 @@ export default function RootLayout({
           </div>
         
           <h2 className={`text-4xl ${honk.className} mt-2`}>
-            <Link href="/buy">Buy</Link>
+            <Link href="/buy">Connect</Link>
           </h2>
         </div>
       

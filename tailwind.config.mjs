@@ -1,5 +1,8 @@
 export default {
   darkMode: "class",
+  content: [
+    "./app/**/*.{js,jsx,ts,tsx}"
+  ],
   theme: {
     extend: {
       colors: {
@@ -8,6 +11,7 @@ export default {
         "sunshoe-plum": "rgba(141, 98, 154, 1)",
         "clouded-pine": "rgba(14, 158, 94, 1)",
         "flirty-salmon": "rgba(255, 78, 150, 1)",
+        "flirty-salmon-dark": "rgba(255, 78, 150, 0.10)"
       },
     },
   },

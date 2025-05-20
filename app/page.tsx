@@ -3,6 +3,7 @@ import { Honk } from "next/font/google";
 import HeroSection from "./components/hero";
 import TokenChart from "./components/token_chart";
 import Link from "next/link";
+import { CSSProperties } from "react"; 
 
 const honk = Honk({
   weight: ["400"],
@@ -30,14 +31,21 @@ class TokenomicsText {
 
 
 export default function Home() {
+  let waveText: string[] = "Connect Wallet !".split("")
   return (
     <main>
     <HeroSection imageOn={true} buyOn={false}></HeroSection>
-    <section className="w-full min-h-screen border-solid border-t-2 border-black">
+    <section className="w-full min-h-screen border-solid border-t-2 border-black flex flex-col gap-50">
   
       <div className="flex flex-col justify-center gap-1 p-4 mb-10 items-center">
         <h2 className={`p-2 text-center text-4xl ${honk.className}`}>About XDCPeacock</h2>
         <p className="text-center">{aboutText}</p>
+      </div>
+
+      <div className="flex flex-col justify-center text-center">
+        <h2 className={`${honk.className} text-5xl`}>Presale (not) Live </h2>
+        <h2 className={`${honk.className} text-5xl`}>Goal: $100,000</h2>
+        
       </div>
 
       <div className="flex flex-col justify-center gap-4 p-4 mb-10 items-center">
@@ -45,55 +53,65 @@ export default function Home() {
         <div className="w-1/2">
           <TokenChart></TokenChart>
         </div>
-        <h2 className={` text-center text2xl ${honk.className}`}></h2>
-        <p className="text-center"></p>
-          
       </div>
 
-      
-      <div className="flex flex-col justify-center items-center gap-1 p-10">
-        <p className={`text-center text-4xl ${honk.className}`}>Socials</p>
-      </div>
-      <div className="justify-center flex w-full">
-        <div className="grid grid-cols-4 w-75 gap-4">
-          
-          <div className="col-span-2">
-          <div className="grid grid-rows-2 gap-1 justify-items-center">
-            <Link href="https://x.com/XDCPeacock">
-              <Image src="/x.svg" width={36} height={36} alt="X social icon"></Image>
-            </Link>
-            <p className="text-center">Twitter</p>
-          </div>
-          </div>
-        
-          <div className="col-span-2">
-          <div className="grid grid-rows-2 gap-1 justify-items-center">
-            <Link href="https://www.instagram.com/xdcpeacock/">
-              <Image src="/telegram.svg" width={36} height={36} alt="X social icon"></Image>
-            </Link>
-            <p className="text-center">Telegram</p>
-          </div>
-          </div>
-        
-          <div className="col-span-2">
-          <div className="grid grid-rows-2 gap-1 justify-items-center">
-            <Image src="/instagram.svg" width={36} height={36} alt="X social icon"></Image>
-            <p className="text-center">Instagram</p>
-          </div>
-          </div>
-        
-          <div className="col-span-2">
-          <div className="grid grid-rows-2 gap-1 justify-items-center ">
-            <Image src="/reddit.svg" width={36} height={36} alt="X social icon"></Image>
-            <p className="text-center">Reddit</p>
-          </div>
-          </div>
 
-          <div className="col-span-4">
+      <div className="flex justify-center">
+        <button className={`${honk.className} wave border-3 border-solid border-black p-2 rounded-lg bg-flirty-salmon text-6xl`}>
+          <div className="wave">
+            {waveText.map( (char, index) => (
+              <span key={index} style={{"--i":index} as CSSProperties} className="p-1">{char}</span>
+            ))}
+          </div>
+        </button>
+      </div>
+
+      <div>
+        <div className="flex flex-col justify-center items-center gap-1 p-10">
+          <p className={`text-center text-5xl ${honk.className}`}>Socials</p>
+        </div>
+        <div className="justify-center flex w-full">
+          <div className="grid grid-cols-4 w-75 gap-4">
+          
+            <div className="col-span-2">
             <div className="grid grid-rows-2 gap-1 justify-items-center">
-              <Image src="/discord.svg" width={36} height={36} alt="X social icon"></Image>
-              <p className="text-center">Discord</p>
+              <Link href="https://x.com/XDCPeacock">
+                <Image src="/x.svg" width={36} height={36} alt="X social icon"></Image>
+              </Link>
+              <p className="text-center">Twitter</p>
             </div>
+            </div>
+        
+            <div className="col-span-2">
+            <div className="grid grid-rows-2 gap-1 justify-items-center">
+              <Link href="https://www.instagram.com/xdcpeacock/">
+                <Image src="/telegram.svg" width={36} height={36} alt="X social icon"></Image>
+              </Link>
+              <p className="text-center">Telegram</p>
+            </div>
+            </div>
+        
+            <div className="col-span-2">
+            <div className="grid grid-rows-2 gap-1 justify-items-center">
+              <Image src="/instagram.svg" width={36} height={36} alt="X social icon"></Image>
+              <p className="text-center">Instagram</p>
+            </div>
+            </div>
+        
+            <div className="col-span-2">
+            <div className="grid grid-rows-2 gap-1 justify-items-center ">
+              <Image src="/reddit.svg" width={36} height={36} alt="X social icon"></Image>
+              <p className="text-center">Reddit</p>
+            </div>
+            </div>
+
+            <div className="col-span-4">
+              <div className="grid grid-rows-2 gap-1 justify-items-center">
+                <Image src="/discord.svg" width={36} height={36} alt="X social icon"></Image>
+                <p className="text-center">Discord</p>
+              </div>
+            </div>
+        
           </div>
         </div>
       </div>
