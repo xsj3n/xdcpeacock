@@ -96,21 +96,27 @@ export default function Home() {
         
             <div className="col-span-2">
             <div className="grid grid-rows-2 gap-1 justify-items-center">
-              <Image src="/instagram.svg" width={36} height={36} alt="X social icon"></Image>
+              <Link href="https://www.instagram.com/xdcpeacock/">
+                <Image src="/instagram.svg" width={36} height={36} alt="X social icon"></Image>
+              </Link>
               <p className="text-center">Instagram</p>
             </div>
             </div>
         
             <div className="col-span-2">
             <div className="grid grid-rows-2 gap-1 justify-items-center ">
-              <Image src="/reddit.svg" width={36} height={36} alt="X social icon"></Image>
+              <Link href="https://www.instagram.com/xdcpeacock/">
+                <Image src="/reddit.svg" width={36} height={36} alt="X social icon"></Image>
+              </Link> 
               <p className="text-center">Reddit</p>
             </div>
             </div>
 
             <div className="col-span-4">
               <div className="grid grid-rows-2 gap-1 justify-items-center">
-                <Image src="/discord.svg" width={36} height={36} alt="X social icon"></Image>
+                <Link href="https://www.instagram.com/xdcpeacock/">
+                  <Image src="/discord.svg" width={36} height={36} alt="X social icon"></Image>
+                </Link>
                 <p className="text-center">Discord</p>
               </div>
             </div>
