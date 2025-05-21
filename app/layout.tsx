@@ -43,7 +43,7 @@ export default function RootLayout({
       <div id="nav" className="flex justify-between  border-b-2 border-solid border-black z-10 h-18 text-3xl sm:text-4xl">
         
         
-        <div className={` ${honk.className} p-2`}>
+        <div className={`${honk.className} p-2`}>
           <Link href="/">XDCP</Link>
         </div>
         

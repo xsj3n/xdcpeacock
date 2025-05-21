@@ -60,13 +60,15 @@ export default function Home() {
         <div>
           <Image src="/xdcpeacock_logo_alt.png" width={160} height={160} alt="Logo next to buy button"></Image>
         </div>
-        <button className={`${honk.className} wave border-3 border-solid border-black p-2 rounded-lg bg-flirty-salmon sm:text-6xl text-4xl`}>
-          <div className="wave">
-            {waveText.map( (char, index) => (
-              <span key={index} style={{"--i":index} as CSSProperties} className="p-1">{char}</span>
-            ))}
-          </div>
-        </button>
+        <Link href="/buy">
+          <button className={`${honk.className} wave border-3 border-solid border-black p-2 rounded-lg bg-flirty-salmon sm:text-6xl text-4xl`}>
+            <div className="wave">
+              {waveText.map( (char, index) => (
+                <span key={index} style={{"--i":index} as CSSProperties} className="p-1">{char}</span>
+              ))}
+            </div>
+          </button>
+        </Link>
       </div>
 
       <div>
