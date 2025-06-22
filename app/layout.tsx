@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Anonymous_Pro, Inter } from "next/font/google";
-import { Honk } from "next/font/google";
+import { Jost } from "next/font/google";
 import Link from "next/link";
 import Image from "next/image";
 import { FlipSwitch } from "./flip_switch"
@@ -13,8 +13,8 @@ const anon_pro = Anonymous_Pro({
   display: "swap"
 })
 
-const honk = Honk({
-  weight: ["400"],
+const honk = Jost({
+  weight: ["500"],
   subsets: ["latin"],
   display: "swap"
 })
@@ -43,18 +43,18 @@ export default function RootLayout({
       <div id="nav" className="flex justify-between  border-b-2 border-solid border-black z-10 h-18 text-3xl sm:text-4xl">
         
         
-        <div className={`${honk.className} p-2`}>
+        <div className={`${honk.className} p-2`} style={{ color: "#57A845" }}>
           <Link href="/">XDCP</Link>
         </div>
         
         <div className="flex justify-end-safe sm:gap-4 pr-2">
-          <h2 className={` ${honk.className} mt-2`}>EN</h2>
+          <h2 className={`${honk.className} mt-2`} style={{ color: '#57A845' }}>EN</h2>
           
           <div className="">
             <FlipSwitch></FlipSwitch>
           </div>
         
-          <h2 className={`${honk.className} mt-2`}>
+          <h2 className={`${honk.className} mt-2`} style={{ color: '#57A845' }}>
             <Link href="/buy">Connect</Link>
           </h2>
         </div>
@@ -65,7 +65,7 @@ export default function RootLayout({
         {children}
 
         <footer className="p-3 h-15 border-solid border-t-2 border-black ">
-          <p className={`${honk.className} text-xl`}>XDCP</p>
+          <p className={`${honk.className} text-xl`} style={{color: "#57A845"}}>XDCP</p>
           <hr className={`text-black h-0.5 w-10 pt-1 pb-1`}  />
           <div className="text-sm">
             <p>XDCP is a memecoin with no intrinsic value or expectation of financial return. There is no formal team or roadmap. The coin is for entertainment purposes only.</p>
