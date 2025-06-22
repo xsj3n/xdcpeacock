@@ -1,12 +1,12 @@
 import Image from "next/image";
-import { Honk } from "next/font/google"; 
+import { Jost } from "next/font/google"; 
 import HeroSection from "./components/hero";
 import TokenChart from "./components/token_chart";
 import Link from "next/link";
 import { CSSProperties } from "react"; 
 
-const honk = Honk({
-  weight: ["400"],
+const honk = Jost({
+  weight: ["500"],
   subsets: ["latin"],
   display: "swap"
 })
@@ -38,18 +38,18 @@ export default function Home() {
     <section className="w-full min-h-screen border-solid border-t-2 border-black flex flex-col gap-50">
   
       <div className="flex flex-col justify-center gap-1 p-4 mb-10 items-center">
-        <h2 className={`p-2 text-center text-4xl ${honk.className}`}>About XDCPeacock</h2>
+        <h2 className={`p-2 text-center text-4xl ${honk.className}`} style={{ color: '#57A845' }}>About XDCPeacock</h2>
         <p className="text-center sm:w-1/2">{aboutText}</p>
       </div>
 
       <div className="flex flex-col justify-center text-center">
-        <h2 className={`${honk.className} text-5xl`}>Presale (not) Live </h2>
-        <h2 className={`${honk.className} text-5xl`}>Goal: $100,000</h2>
+        <h2 className={`${honk.className} text-5xl`} style={{ color: '#57A845' }}>Presale (not) Live </h2>
+        <h2 className={`${honk.className} text-5xl`} style={{ color: '#57A845' }}>Goal: $100,000</h2>
         
       </div>
 
       <div className="flex flex-col justify-center gap-4 p-4 mb-10 items-center">
-        <h2 className={`p-2 text-center text-4xl ${honk.className}`}>Tokenomics</h2>
+        <h2 className={`p-2 text-center text-4xl ${honk.className}`} style={{ color: '#57A845' }}>Tokenomics</h2>
         <div className="sm:w-3/8 w-3/4">
           <TokenChart></TokenChart>
         </div>
@@ -61,7 +61,7 @@ export default function Home() {
           <Image src="/xdcpeacock_logo_alt.png" width={160} height={160} alt="Logo next to buy button"></Image>
         </div>
         <Link href="/buy">
-          <button className={`${honk.className} wave border-3 border-solid border-black p-2 rounded-lg bg-flirty-salmon sm:text-6xl text-4xl`}>
+          <button className={`${honk.className} wave border-3 border-solid border-black p-2 rounded-lg bg-flirty-salmon sm:text-6xl text-4xl`} style={{ color: '#57A845' }}>
             <div className="wave">
               {waveText.map( (char, index) => (
                 <span key={index} style={{"--i":index} as CSSProperties} className="p-1">{char}</span>
@@ -73,7 +73,7 @@ export default function Home() {
 
       <div>
         <div className="flex flex-col justify-center items-center gap-1 p-10">
-          <p className={`text-center text-5xl ${honk.className}`}>Socials</p>
+          <p className={`text-center text-5xl ${honk.className}`} style={{ color: '#57A845' }}>Socials</p>
         </div>
         <div className="justify-center flex w-full">
           <div className="grid grid-cols-4 w-75 gap-4">
