@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
-import { Anonymous_Pro, Inter } from "next/font/google";
+import { Anonymous_Pro } from "next/font/google";
 import { Jost } from "next/font/google";
 import Link from "next/link";
 import Image from "next/image";
 import { FlipSwitch } from "./flip_switch"
 import "./global.css"
-import { ImageOptimizerCache } from "next/dist/server/image-optimizer";
+import { Nunito_Sans } from "next/font/google";
 
-const anon_pro = Anonymous_Pro({
+
+const anon_pro = Nunito_Sans({
   weight: ["400", "700"],
   subsets: ["latin"],
   display: "swap"
@@ -43,18 +44,18 @@ export default function RootLayout({
       <div id="nav" className="flex justify-between  border-b-2 border-solid border-black z-10 h-18 text-3xl sm:text-4xl">
         
         
-        <div className={`${honk.className} p-2`} style={{ color: "#57A845" }}>
+        <div className={`${honk.className} p-2 mt-2`} style={{ color: "#57A845" }}>
           <Link href="/">XDCP</Link>
         </div>
         
         <div className="flex justify-end-safe sm:gap-4 pr-2">
-          <h2 className={`${honk.className} mt-2`} style={{ color: '#57A845' }}>EN</h2>
+          <h2 className={`${honk.className} p-2 -mr-3 mt-2`} style={{ color: '#57A845' }}>EN</h2>
           
-          <div className="">
+          <div className=" -mr-3">
             <FlipSwitch></FlipSwitch>
           </div>
         
-          <h2 className={`${honk.className} mt-2`} style={{ color: '#57A845' }}>
+          <h2 className={`${honk.className} p-2 mt-2`} style={{ color: '#57A845' }}>
             <Link href="/buy">Connect</Link>
           </h2>
         </div>

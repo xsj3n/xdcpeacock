@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Jost } from "next/font/google"; 
+import { Jost } from "next/font/google";
 import HeroSection from "./components/hero";
 import TokenChart from "./components/token_chart";
 import Link from "next/link";
@@ -7,6 +7,13 @@ import { CSSProperties } from "react";
 
 const honk = Jost({
   weight: ["500"],
+  subsets: ["latin"],
+  display: "swap"
+})
+
+
+const _honk = Jost({
+  weight: ["600"],
   subsets: ["latin"],
   display: "swap"
 })
@@ -61,7 +68,7 @@ export default function Home() {
           <Image src="/xdcpeacock_logo_alt.png" width={160} height={160} alt="Logo next to buy button"></Image>
         </div>
         <Link href="/buy">
-          <button className={`${honk.className} wave border-3 border-solid border-black p-2 rounded-lg bg-flirty-salmon sm:text-6xl text-4xl`} style={{ color: '#57A845' }}>
+          <button className={`${_honk.className} wave border-3 font-bold border-solid border-black p-2 rounded-lg  sm:text-6xl text-4xl`} style={{ color: '#57A845', backgroundColor: "#9966FF" , WebkitTextStroke: "1px black"}}>
             <div className="wave">
               {waveText.map( (char, index) => (
                 <span key={index} style={{"--i":index} as CSSProperties} className="p-1">{char}</span>
