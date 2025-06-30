@@ -41,7 +41,7 @@ export default function Home() {
   let waveText: string[] = "Connect Wallet !".split("")
   return (
     <main>
-    <HeroSection imageOn={true} buyOn={false}></HeroSection>
+    <HeroSection imageOn={true} buyOn={false} fontClassName={honk.className}></HeroSection>
     <section className="w-full min-h-screen border-solid border-t-2 border-black flex flex-col gap-50">
   
       <div className="flex flex-col justify-center gap-1 p-4 mb-10 items-center">
