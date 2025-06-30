@@ -49,12 +49,6 @@ export default function Home() {
         <p className="text-center sm:w-1/2">{aboutText}</p>
       </div>
 
-      <div className="flex flex-col justify-center text-center">
-        <h2 className={`${honk.className} text-5xl`} style={{ color: '#57A845' }}>Presale (not) Live </h2>
-        <h2 className={`${honk.className} text-5xl`} style={{ color: '#57A845' }}>Goal: $100,000</h2>
-        
-      </div>
-
       <div className="flex flex-col justify-center gap-4 p-4 mb-10 items-center">
         <h2 className={`p-2 text-center text-4xl ${honk.className}`} style={{ color: '#57A845' }}>Tokenomics</h2>
         <div className="sm:w-3/8 w-3/4">
