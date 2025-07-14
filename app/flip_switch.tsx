@@ -22,15 +22,6 @@ export function FlipSwitch({className}: FlipSwitchClassProp ) {
 
   const [isFlipped, setIsFlipped] = useState<boolean>(false)
  
-  useEffect(() => {
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      localStorage.setItem("theme", "dark")
-    } else {
-      localStorage.setItem("theme", "light")
-    }
-    darkClassToggle()
-  },[])
-  
 
   function toggleSwitch() {
     darkClassToggle()

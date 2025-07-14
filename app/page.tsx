@@ -3,7 +3,8 @@ import { Jost } from "next/font/google";
 import HeroSection from "./components/hero";
 import TokenChart from "./components/token_chart";
 import Link from "next/link";
-import { CSSProperties } from "react"; 
+import { CSSProperties } from "react";
+import PresaleCountdown from "./components/presale";
 
 const honk = Jost({
   weight: ["500"],
@@ -19,40 +20,32 @@ const _honk = Jost({
 })
 
 const aboutText = `
-XDCP is a token in the XDC ecosystem. XDCP was built on the XDC network because it is
-the leader in crypto speed and efficiency, has low fees, it is eco-friendly and has military
-grade security. XDC has already been chosen as the ISO 20022 banking coin, and we want
-to fly along for the ride. XDCP is a community driven memecoin that is dedicated to
-meme’s and building the peacock gang community from the ground up, so let’s make this
-peacock soar!
+XDCP is a token in the XDC ecosystem. XDCP was built on the XDC network because the XDC
+network is a leader in crypto speed and efficiency, low fees, eco-friendly and has military grade
+security. XDC has already been chosen as the ISOSS22 banking coin and we want to fly along for
+the ride. XDCP is a community driven meme coin that is dedicated to meme’s and building the
+peacock’s gang community from the ground up so let’s make this peacock soar.
 `
 
-class TokenomicsText {
-  header: string;
-  text: string;
-  constructor(header: string, text: string) {
-    this.header = header;
-    this.text = text;
-  }
-}
-
-
 export default function Home() {
-  let waveText: string[] = "Connect Wallet !".split("")
+  //let waveText: string[] = "Connect Wallet !".split("")
   return (
     <main>
     <HeroSection imageOn={true} buyOn={false} fontClassName={honk.className}></HeroSection>
-    <section className="w-full min-h-screen border-solid border-t-2 border-black flex flex-col gap-50">
+    <section className="w-full min-h-screen border-solid border-t-2 border-black flex flex-col gap-25">
   
-      <div className="flex flex-col justify-center gap-1 p-4 mb-10 items-center">
+      <div className="flex flex-col justify-center gap-1 p-4 items-center">
         <h2 className={`p-2 text-center text-4xl ${honk.className}`} style={{ color: '#57A845' }}>About XDCPeacock</h2>
-        <p className="text-center sm:w-1/2">{aboutText}</p>
+        <p className="text-center sm:text-[1.25rem] sm:w-3/4">{aboutText}</p>
       </div>
 
-      <div className="flex flex-col justify-center gap-4 p-4 mb-10 items-center">
+      <PresaleCountdown></PresaleCountdown>
+      
+
+      <div className="flex flex-col justify-center gap-4 p-4 items-center">
         <h2 className={`p-2 text-center text-4xl ${honk.className}`} style={{ color: '#57A845' }}>Tokenomics</h2>
         <div className="sm:w-3/8 w-3/4">
-          <TokenChart></TokenChart>
+          <TokenChart className={honk.className}></TokenChart>
         </div>
       </div>
 
@@ -62,12 +55,8 @@ export default function Home() {
           <Image src="/xdcpeacock_logo_alt.png" width={160} height={160} alt="Logo next to buy button"></Image>
         </div>
         <Link href="/buy">
-          <button className={`${_honk.className} wave border-3 font-bold border-solid border-black p-2 rounded-lg  sm:text-6xl text-4xl`} style={{ color: '#57A845', backgroundColor: "#9966FF" , WebkitTextStroke: "1px black"}}>
-            <div className="wave">
-              {waveText.map( (char, index) => (
-                <span key={index} style={{"--i":index} as CSSProperties} className="p-1">{char}</span>
-              ))}
-            </div>
+          <button className={`${_honk.className}  wave border-3 font-bold border-solid border-black rounded-lg  sm:text-5xl text-4xl`} style={{ color: '#57A845', backgroundColor: "#9966FF" , WebkitTextStroke: "1px black"}}>
+            <div className="p-1">Connect Wallet!</div>
           </button>
         </Link>
       </div>

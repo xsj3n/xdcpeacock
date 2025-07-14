@@ -6,6 +6,7 @@ import Image from "next/image";
 import { FlipSwitch } from "./flip_switch"
 import "./global.css"
 import { Nunito_Sans } from "next/font/google";
+import { ACTION_HMR_REFRESH } from "next/dist/client/components/router-reducer/router-reducer-types";
 
 
 const anon_pro = Nunito_Sans({
@@ -37,7 +38,7 @@ export default function RootLayout({
   let themeBgClassName = "bg-light dark:bg-dark"
   let themeTextClassName = "text-dark dark:text-light"
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body className={`${themeBgClassName} ${themeTextClassName} ${anon_pro.className}`}>
         
       <nav className="fixed top-0 left-0 right-0 z-50 shadow bg-light dark:bg-dark">
@@ -65,19 +66,24 @@ export default function RootLayout({
     
         {children}
 
-        <footer className="p-3 h-15 border-solid border-t-2 border-black ">
+        <footer className="p-2 h-15 border-solid border-t-2 border-black">
           <p className={`${honk.className} text-xl`} style={{color: "#57A845"}}>XDCP</p>
           <hr className={`text-black h-0.5 w-10 pt-1 pb-1`}  />
           <div className="text-sm">
-            <p>XDCP is a memecoin with no intrinsic value or expectation of financial return. There is no formal team or roadmap. The coin is for entertainment purposes only.</p>
-            <hr className={`text-black h-0.5 w-7.5`}  />
+            <p className="mb-1">XDCP is a memecoin with no intrinsic value or expectation of financial return. There is no formal team or roadmap. The coin is for entertainment purposes only.</p>
+            <hr className={`text-black h-0.5 w-7.5 pb-1`}  />
             <p style={{fontWeight: 700}}>Sitemap</p>
-            <div className="flex flex-row gap-3">
-              <Link href="/">Home</Link>
-              <Link href="/buy">Purchase</Link>
+            <div className="flex flex-row gap-1 pb-1">
+              <Link className="underline" href="/">Home</Link>
+              <div>|</div>
+              <Link className="underline" href="/buy">Purchase</Link>
             </div>
-            <hr className={`text-black h-0.5 w-5`}  />
-            <Link href="/under_construction" style={{fontWeight: 700}}>FAQ</Link>
+            <hr className={`text-black h-0.5 w-5 pb-1`}  />
+            <div className="flex flex-row gap-1">
+              <Link href="/under_construction"  className="pb-2 underline">FAQ</Link>
+              <div>|</div>
+              <Link href="/whitepaper.pdf"  className="pb-2 underline">Whitepaper</Link>
+            </div>
           </div>
       </footer>
 

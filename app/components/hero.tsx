@@ -1,11 +1,11 @@
 import React from "react"
 import Image from "next/image"
 import XPayIframe from "./xpay_embed"
-import { color } from "chart.js/helpers"
+
 
 interface heroSectionImageProp {
   imageOn: boolean,
-  fontClassName: string
+  fontClassName?: string
 }
 
 interface heroSectionBuyProp {
@@ -15,9 +15,7 @@ interface heroSectionBuyProp {
 export default function HeroSection({imageOn, fontClassName,  buyOn}: heroSectionImageProp & heroSectionBuyProp){
   const imageOnElements = (
     <div className="flex flex-col justify-center text-center">
-      <Image src="/xdcpeacock_logo_nobg.png" width={400} height={400} alt="mascot image" style={{color: "#625750"}}></Image>
-      <h2 className={`${fontClassName} text-5xl`} style={{ color: '#57A845' }}>Presale (not) Live </h2>
-      <h2 className={`${fontClassName} text-5xl`} style={{ color: '#57A845' }}>Goal: $100,000</h2>
+      <Image src="/hero_img.png" width={600} height={600} alt="mascot image" style={{color: "#625750"}}></Image>
     </div>
     
   )
