@@ -24,6 +24,11 @@ const honk = Jost({
 export const metadata: Metadata = {
   title: "XDCPeacock",
   description: "XDCPeacock home site",
+  icons: {
+    icon: [
+      { url: "/favicon.png"}
+    ]
+  }
 };
 
 
