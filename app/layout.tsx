@@ -57,7 +57,7 @@ export default function RootLayout({
           </div>
         
           <h2 className={`${honk.className} p-2 mt-2`} style={{ color: '#57A845' }}>
-            <Link href="/buy">Connect</Link>
+            <Link href="/under_construction">Connect</Link>
           </h2>
         </div>
       
@@ -70,15 +70,15 @@ export default function RootLayout({
           <p className={`${honk.className} text-xl`} style={{color: "#57A845"}}>XDCP</p>
           <hr className={`text-black h-0.5 w-10 pt-1 pb-1`}  />
           <div className="text-sm">
-            <p className="mb-1">XDCP is a memecoin with no intrinsic value or expectation of financial return. There is no formal team or roadmap. The coin is for entertainment purposes only.</p>
-            <hr className={`text-black h-0.5 w-7.5 pb-1`}  />
+            <p className="mb-1">XDCP is a memecoin with no intrinsic value or expectation of financial return. There is no formal team or roadmap. The coin is for entertainment purposes only. Coin will still launch if presale goal is not met.</p>
+            <hr className={`dark:text-white text-black h-0.5 w-7.5 pb-1`}  />
             <p style={{fontWeight: 700}}>Sitemap</p>
             <div className="flex flex-row gap-1 pb-1">
               <Link className="underline" href="/">Home</Link>
               <div>|</div>
               <Link className="underline" href="/buy">Purchase</Link>
             </div>
-            <hr className={`text-black h-0.5 w-5 pb-1`}  />
+            <hr className={`dark:text-white text-black h-0.5 w-5 pb-1`}  />
             <div className="flex flex-row gap-1">
               <Link href="/under_construction"  className="pb-2 underline">FAQ</Link>
               <div>|</div>
