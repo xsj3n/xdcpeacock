@@ -5,7 +5,7 @@ import TokenChart from "./components/token_chart";
 import Link from "next/link";
 import { CSSProperties } from "react";
 import PresaleCountdown from "./components/presale";
-import SocialsSection from "./compnents/socials";
+import SocialsSection from "./components/socials";
 const honk = Jost({
   weight: ["500"],
   subsets: ["latin"],
@@ -63,9 +63,7 @@ export default function Home() {
 
       <SocialsSection></SocialsSection>
         
-          </div>
-        </div>
-      </div>
+        
     </section>
     </main>
   );

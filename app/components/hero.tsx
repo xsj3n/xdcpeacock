@@ -14,8 +14,9 @@ interface heroSectionBuyProp {
 
 export default function HeroSection({imageOn, fontClassName,  buyOn}: heroSectionImageProp & heroSectionBuyProp){
   const imageOnElements = (
-    <div className="flex flex-col justify-center text-center">
-      <Image src="/hero_img.png" width={600} height={600} alt="mascot image" style={{color: "#625750"}}></Image>
+    <div className="flex flex-col justify-center text-center mt-20">
+      <h2 className={`${fontClassName} text-6xl -mb-20`} style={{ color: "#57A845" }}>XDCPeacock</h2>
+      <Image src="/hero_img.png" width={600} height={600} alt="mascot image" ></Image>
     </div>
     
   )
