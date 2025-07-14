@@ -5,7 +5,7 @@ import TokenChart from "./components/token_chart";
 import Link from "next/link";
 import { CSSProperties } from "react";
 import PresaleCountdown from "./components/presale";
-
+import SocialsSection from "./compnents/socials";
 const honk = Jost({
   weight: ["500"],
   subsets: ["latin"],
@@ -61,57 +61,7 @@ export default function Home() {
         </Link>
       </div>
 
-      <div>
-        <div className="flex flex-col justify-center items-center gap-1 p-10">
-          <p className={`text-center text-5xl ${honk.className}`} style={{ color: '#57A845' }}>Socials</p>
-        </div>
-        <div className="justify-center flex w-full">
-          <div className="grid grid-cols-4 w-75 gap-4">
-          
-            <div className="col-span-2">
-            <div className="grid grid-rows-2 gap-1 justify-items-center">
-              <Link href="https://x.com/XDCPeacock">
-                <Image src="/x.svg" width={36} height={36} alt="X social icon"></Image>
-              </Link>
-              <p className="text-center">Twitter</p>
-            </div>
-            </div>
-        
-            <div className="col-span-2">
-            <div className="grid grid-rows-2 gap-1 justify-items-center">
-              <Link href="https://www.instagram.com/xdcpeacock/">
-                <Image src="/telegram.svg" width={36} height={36} alt="X social icon"></Image>
-              </Link>
-              <p className="text-center">Telegram</p>
-            </div>
-            </div>
-        
-            <div className="col-span-2">
-            <div className="grid grid-rows-2 gap-1 justify-items-center">
-              <Link href="https://www.instagram.com/xdcpeacock/">
-                <Image src="/instagram.svg" width={36} height={36} alt="X social icon"></Image>
-              </Link>
-              <p className="text-center">Instagram</p>
-            </div>
-            </div>
-        
-            <div className="col-span-2">
-            <div className="grid grid-rows-2 gap-1 justify-items-center ">
-              <Link href="https://www.instagram.com/xdcpeacock/">
-                <Image src="/reddit.svg" width={36} height={36} alt="X social icon"></Image>
-              </Link> 
-              <p className="text-center">Reddit</p>
-            </div>
-            </div>
-
-            <div className="col-span-4">
-              <div className="grid grid-rows-2 gap-1 justify-items-center">
-                <Link href="https://www.instagram.com/xdcpeacock/">
-                  <Image src="/discord.svg" width={36} height={36} alt="X social icon"></Image>
-                </Link>
-                <p className="text-center">Discord</p>
-              </div>
-            </div>
+      <SocialsSection></SocialsSection>
         
           </div>
         </div>
