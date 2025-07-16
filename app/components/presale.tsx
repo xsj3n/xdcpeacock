@@ -10,7 +10,7 @@ export default function PresaleCountdown({classNames}: PresaleProp) {
   const [timeLeft, setTimeLeft] = useState<string>('');
 
   useEffect(() => {
-    const countDownDate = new Date('July 16, 2025 12:00:00 UTC').getTime();
+    const countDownDate = new Date('July 18, 2025 12:00:00 UTC').getTime();
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -55,11 +55,13 @@ export default function PresaleCountdown({classNames}: PresaleProp) {
 
   return (
     <div className={`${promoBoxClasses} ${classNames}`}>
+    <a href="https://xdc.sale/presale/0x3b8063BB8F27fEb4eA6224faBfcd281D095fB648">
       <img
         src="https://i.ibb.co/cKz5jJMT/56ea5b91-ee2a-4e66-91e4-d5ec2bec96cd.png"
         alt="XDCPeacock Presale Banner"
         className={imgClasses}
       />
+    </a>
       <div className={countDownClasses}>{timeLeft}</div>
     </div>
   );
