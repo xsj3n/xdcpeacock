@@ -17,7 +17,7 @@ export default function HeroSection({imageOn, fontClassName,  buyOn}: heroSectio
     <div className="flex flex-col justify-center text-center mt-20 mb-10">
       <h2 className={`${fontClassName} sm:text-6xl text-4xl -mb-20`} style={{ color: "#57A845" }}>Meet XDCPeacock</h2>
       <Image src="/hero_img.png" width={600} height={600} alt="mascot image" ></Image>
-      <h2 className={`${fontClassName} sm:text-6xl text-4xl`} style={{ color: "#57A845" }}>The Newest Memecoin on the XDC Network</h2>
+      <h2 className={`${fontClassName} sm:text-5xl text-4xl`} style={{ color: "#57A845" }}>The Newest Memecoin on the XDC Network</h2>
     </div>
     
   )
