@@ -10,7 +10,9 @@ export default function PresaleCountdown({classNames}: PresaleProp) {
  
   const promoBoxClasses = `
     flex
+    flex-col
     justify-center
+    items-center
     bg-zinc-900
     border-4 border-green-500
     rounded-2xl
@@ -31,7 +33,6 @@ export default function PresaleCountdown({classNames}: PresaleProp) {
 
   return (
     <div className={`${promoBoxClasses} ${classNames}`}>
-    <div>
     <a href="https://xdc.sale/presale/0x3b8063BB8F27fEb4eA6224faBfcd281D095fB648">
       <Image
         src="/presale_live.png"
@@ -41,10 +42,7 @@ export default function PresaleCountdown({classNames}: PresaleProp) {
         className={imgClasses}
       ></Image>
     </a>
-    <div>
       <div className={`${countDownClasses} -mb-5`}>Presale ends on the 25th, and will then launch!</div>
-    </div>
-    </div>
     </div>
   );
 };
