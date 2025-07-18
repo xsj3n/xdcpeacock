@@ -27,7 +27,7 @@ export default function PresaleCountdown({classNames}: PresaleProp) {
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      setTimeLeft("Presale Live Now!");
+      setTimeLeft("Presale ends on the 25th,");
     }, 1000);
 
     return () => clearInterval(interval);
@@ -68,6 +68,7 @@ export default function PresaleCountdown({classNames}: PresaleProp) {
       ></Image>
     </a>
       <div className={countDownClasses}>{timeLeft}</div>
+      <div className={countDownClasses}>Launches Immediately After!</div>
     </div>
     </div>
   );
