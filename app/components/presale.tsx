@@ -10,7 +10,7 @@ export default function PresaleCountdown({classNames}: PresaleProp) {
   const [timeLeft, setTimeLeft] = useState<string>('');
 
   useEffect(() => {
-    const countDownDate = new Date('July 18, 2025 12:00:00 UTC').getTime();
+    const countDownDate = new Date('July 18, 2025 12:00:00 UTC+4').getTime();
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
