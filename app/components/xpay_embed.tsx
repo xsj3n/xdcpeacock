@@ -5,7 +5,7 @@ interface xPayIframeProp {
 }
 
 export default function XPayIframe({className}: xPayIframeProp) {
-  let url: string = "https://app.xspswap.finance/swap#/swap?chainName=xinfin&outputCurrency=0xFa4dDcFa8E3d0475f544d0de469277CF6e0A6Fd1"
+  let url: string = "https://app.xspswap.finance/swap#/swap?chainName=xinfin&outputCurrency=0x3b8063BB8F27fEb4eA6224faBfcd281D095fB648&inputCurrency=XDC"
   return(
   <div className={`${className} flex justify-center`}>
     <div className="relative sm:h-[558px] sm:w-[403px] h-[536px] w-[370px] border-2 border-solid border-black rounded-md" >

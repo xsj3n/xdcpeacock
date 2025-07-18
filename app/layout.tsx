@@ -62,7 +62,7 @@ export default function RootLayout({
           </div>
         
           <h2 className={`${honk.className} p-2 mt-2`} style={{ color: '#57A845' }}>
-            <Link href="/under_construction">Connect</Link>
+            <Link href="/buy">Connect</Link>
           </h2>
         </div>
       

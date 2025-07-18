@@ -51,7 +51,7 @@ export default function Home() {
 
 
       <div className="flex flex-col justify-center items-center gap-5">
-        <Link href="/under_construction">
+        <Link href="/buy">
           <button className={`${_honk.className}  wave border-3 font-bold border-solid border-black rounded-lg  sm:text-5xl text-4xl`} style={{ color: '#57A845', backgroundColor: "#9966FF" , WebkitTextStroke: "1px black"}}>
             <div className="p-1">Connect Wallet!</div>
           </button>
