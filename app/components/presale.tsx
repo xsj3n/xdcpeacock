@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useState} from 'react';
-
+import Image from 'next/image';
 interface PresaleProp {
   classNames?: string
 }
@@ -35,6 +35,8 @@ export default function PresaleCountdown({classNames}: PresaleProp) {
 
 
   const promoBoxClasses = `
+    flex
+    justify-center
     bg-zinc-900
     border-4 border-green-500
     rounded-2xl
@@ -55,14 +57,18 @@ export default function PresaleCountdown({classNames}: PresaleProp) {
 
   return (
     <div className={`${promoBoxClasses} ${classNames}`}>
+    <div>
     <a href="https://xdc.sale/presale/0x3b8063BB8F27fEb4eA6224faBfcd281D095fB648">
-      <img
-        src="https://i.ibb.co/cKz5jJMT/56ea5b91-ee2a-4e66-91e4-d5ec2bec96cd.png"
+      <Image
+        src="/presale_live.png"
+        width={450}
+        height={450}
         alt="XDCPeacock Presale Banner"
         className={imgClasses}
-      />
+      ></Image>
     </a>
       <div className={countDownClasses}>{timeLeft}</div>
+    </div>
     </div>
   );
 };
