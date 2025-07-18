@@ -27,7 +27,7 @@ export default function PresaleCountdown({classNames}: PresaleProp) {
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      setTimeLeft(`⏳ Presale starts in: ${days}d ${hours}h ${minutes}m ${seconds}s`);
+      setTimeLeft("Presale Live Now!");
     }, 1000);
 
     return () => clearInterval(interval);
