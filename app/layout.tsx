@@ -47,7 +47,7 @@ export default function RootLayout({
       <body className={`${themeBgClassName} ${themeTextClassName} ${anon_pro.className}`}>
         
       <nav className="fixed top-0 left-0 right-0 z-50 shadow bg-light dark:bg-dark">
-      <div id="nav" className="flex justify-between  border-b-2 border-solid border-black z-10 h-18 text-3xl sm:text-4xl">
+      <div id="nav" className="flex justify-between  border-b-2 border-solid border-black z-10 h-20 text-3xl sm:text-4xl">
         
         
         <div className={`${honk.className} p-2 mt-2`} style={{ color: "#57A845" }}>
