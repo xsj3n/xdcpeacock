@@ -7,33 +7,7 @@ interface PresaleProp {
 }
 
 export default function PresaleCountdown({classNames}: PresaleProp) {
-  const [timeLeft, setTimeLeft] = useState<string>('');
-
-  useEffect(() => {
-    const countDownDate = new Date('July 18, 2025 12:00:00 UTC+4').getTime();
-
-    const interval = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = countDownDate - now;
-
-      if (distance < 0) {
-        setTimeLeft('🚀 Presale is LIVE!');
-        clearInterval(interval);
-        return;
-      }
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      setTimeLeft("Presale ends on the 25th,");
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-
+ 
   const promoBoxClasses = `
     flex
     justify-center
@@ -67,8 +41,9 @@ export default function PresaleCountdown({classNames}: PresaleProp) {
         className={imgClasses}
       ></Image>
     </a>
-      <div className={countDownClasses}>{timeLeft}</div>
-      <div className={countDownClasses}>Launches Immediately After!</div>
+    <div>
+      <div className={`${countDownClasses} -mb-5`}>Presale ends on the 25th, and will then launch!</div>
+    </div>
     </div>
     </div>
   );
