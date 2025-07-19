@@ -42,7 +42,7 @@ export default function PresaleCountdown({classNames}: PresaleProp) {
         className={imgClasses}
       ></Image>
     </a>
-      <div className={`${countDownClasses} -mb-5`}>Presale ends on the 25th, and will then launch!</div>
+      <div className={`${countDownClasses} -mb-5`}>Presale LIVE July 18 at 12AM through July 25 at 12 AM. XDCP will then continue to launch!</div>
     </div>
   );
 };
